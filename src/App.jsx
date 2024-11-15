@@ -1,10 +1,36 @@
-import React from 'react';
+import React , {useState} from 'react';
 import Header from './components/Header';
 
 const App = () => {
+
+  const [state, setState] = useState({
+    header: {
+      image: "img/logo.svg",
+      home : {
+        linkHome:"index.html",
+        textHome: "Prueba"
+      }, 
+      about:  {
+        linkAbout:"about-us.html",
+        textAbout: "About Us"
+      } ,
+      services: {
+        linkServ:"services.html",
+        textServ: "Services",
+      } ,
+      gallery: {
+        linkGal:"gallery.html",
+        textGal: "Gallery"
+      } ,
+      contact: {
+        linkCont:"contact.html",
+        textCont: "Contact"
+      } ,
+    },
+  })
   return (
     <>
- <Header />
+ <Header header={state.header} />
   {/* MAIN */}
   <main role="main">
     {/* TOP SECTION */}
