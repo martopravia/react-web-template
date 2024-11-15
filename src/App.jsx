@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import Header from './components/Header';
+import Main from "./components/Main"
 
 const App = () => {
 
@@ -29,63 +30,21 @@ const App = () => {
     },
   })
   return (
+
     <>
- <Header header={state.header} />
-  {/* MAIN */}
-  <main role="main">
-    {/* TOP SECTION */}
-    <section className="grid">
-      {/* Main Carousel */}
-      <div className="s-12 margin-bottom carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-hide-arrows background-dark">
-        <div
-          className="item background-image"
-          style={{ backgroundImage: "url(img/carousel-01.jpg)" }}
+    <Header header={state.header} />
+    <Main/>
+   {/* SECTION 1 */}
+   <section className="grid margin text-center">
+        <a
+          href="/"
+          className="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-red"
         >
-          <p className="text-padding text-strong text-white text-s-size-30 text-size-60 text-uppercase background-primary">
-            We are Web design Heroes
-          </p>
-          <p className="text-padding text-size-20 text-dark text-uppercase background-white">
-            Con nonummy sem integer interdum volutpat dis eget eligendi aliquip
-            dolorum magnam.
-          </p>
-        </div>
-        <div
-          className="item background-image"
-          style={{ backgroundImage: "url(img/carousel-02.jpg)" }}
-        >
-          <p className="text-padding text-strong text-white text-s-size-30 text-size-60 text-uppercase background-primary">
-            Inspired by Technologies
-          </p>
-          <p className="text-padding text-size-20 text-dark text-uppercase background-white">
-            Con nonummy sem integer interdum volutpat dis eget eligendi aliquip
-            dolorum magnam.
-          </p>
-        </div>
-        <div
-          className="item background-image"
-          style={{ backgroundImage: "url(img/carousel-03.jpg)" }}
-        >
-          <p className="text-padding text-strong text-white text-s-size-30 text-size-60 text-uppercase background-primary">
-            CSS and HTML is our Playground
-          </p>
-          <p className="text-padding text-size-20 text-dark text-uppercase background-white">
-            Con nonummy sem integer interdum volutpat dis eget eligendi aliquip
-            dolorum magnam.
-          </p>
-        </div>
-      </div>
-    </section>
-    {/* SECTION 1 */}
-    <section className="grid margin text-center">
-      <a
-        href="/"
-        className="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-red"
-      >
-        <i className="icon-sli-equalizer text-size-60 text-white center margin-bottom-15" />
-        <h3 className="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">
-          Unlimited Color Variants
-        </h3>
-      </a>
+          <i className="icon-sli-equalizer text-size-60 text-white center margin-bottom-15" />
+          <h3 className="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">
+            Unlimited Color Variants
+          </h3>
+        </a>
       <a
         href="/"
         className="s-12 m-6 l-3 padding-2x vertical-center margin-bottom background-blue"
@@ -118,17 +77,14 @@ const App = () => {
     </section>
     {/* SECTION 2 */}
     <section className="grid section margin-bottom background-dark">
-      <h2 className="s-12 l-6 center text-thin text-size-30 text-white text-uppercase margin-bottom-30">
-        Responsive <b>Parallax Background</b>
-      </h2>
-      <p className="s-12 l-6 center">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.
-      </p>
-    </section>
+        <h2 className="s-12 l-6 center text-thin text-size-30 text-white text-uppercase margin-bottom-30">
+          Responsive <b>Parallax Background</b>
+        </h2>
+        <p className="s-12 l-6 center">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
+        </p>
+      </section>
+
     {/* SECTION 3 */}
     <section className="grid margin">
       {/* Image*/}
@@ -201,24 +157,19 @@ const App = () => {
         <i className="icon-sli-social-linkedin text-size-60 text-white center" />
       </a>
     </section>
-  </main>
+  <main>
   {/* FOOTER */}
   <footer className="grid">
-    {/* Footer - top */}
-    {/* Image*/}
-    <div
-      className="s-12 l-3 m-row-3 margin-bottom background-image"
-      style={{ backgroundImage: "url(img/img-04.jpg)" }}
-    />
-    <div className="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
-      <h2 className="text-strong text-uppercase">Who We Are?</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy.
-      </p>
-    </div>
+        <div
+          className="s-12 l-3 m-row-3 margin-bottom background-image"
+          style={{ backgroundImage: "url(img/img-04.jpg)" }}
+        />
+        <div className="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
+          <h2 className="text-strong text-uppercase">Who We Are?</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
+          </p>
+        </div>
     <div className="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
       <h2 className="text-strong text-uppercase">Where We Are?</h2>
       <img className="full-img" src="img/map.svg" alt="" />
@@ -264,9 +215,9 @@ const App = () => {
       </p>
     </div>
   </footer>
+</main>
 </>
-
   )
 }
 
-export default App
+export default App;
